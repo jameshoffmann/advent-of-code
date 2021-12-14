@@ -39,9 +39,13 @@ export function symmetricDifference(setA, setB) {
 
 export function difference(setA, setB) {
     let _difference = new Set(setA)
-    for (let elem of setB) {
-        _difference.delete(elem)
+    if (setB.size !== 0) {
+        for (let elem of setB) {
+            _difference.delete(elem)
+        }
     }
+    else return setA
+    
     return _difference
 }
 
