@@ -9,7 +9,7 @@ def main():
         for i in range(0, len(sack)):
             if i < len(sack)//2:
                 items.add(sack[i])
-            elif sack[i] in itemsSet:
+            elif sack[i] in items:
                 sum += ord(sack[i]) - 96 if sack[i].islower() else ord(sack[i]) - 38
                 break
     print(sum)
